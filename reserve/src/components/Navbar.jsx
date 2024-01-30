@@ -8,6 +8,7 @@ import {
     DialogFooter,
 } from "@material-tailwind/react";
 import axios from 'axios'
+import lock from '../assets/images/lock.png'
 
 function Navbar() { 
     const [open, setOpen] = useState(false);
@@ -16,10 +17,10 @@ function Navbar() {
     const handleOpen = () => setOpen(true);
 
     return (
-        <div className=' sticky top-0 bg-white z-50 '>
+        <div className=' sticky top-0 bg-white z-[10000] '>
             <div className='md:flex justify-between items-center py-5 mx-5 container md:mx-auto'>
                 <div className='w-20'>
-                    <img src="https://cdn-icons-png.flaticon.com/512/7245/7245083.png" alt="logo" className='object-cover' />
+                    <img src={lock} alt="logo" width={'100px'} className='object-cover' />
                 </div>
 
                 <div className='inline-flex gap-5'>

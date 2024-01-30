@@ -31,7 +31,7 @@ function Services() {
 
             <div className='my-[20px] md:flex md:gap-2'>
                 <Item title='CASH STORAGE' text='We have access to over a ten million square feet of storage space in strategic partnership locations' iconName={money}/>
-                <Item title='GEM STORAGE' text='Jewellery Storage can be difficult, as you often want to wear it. It is ideal to consolidate the storage of your jewels' iconName={gem}/>
+                <Item title='DIAMOND & JEWELERY' text='Jewellery Storage can be difficult, as you often want to wear it. It is ideal to consolidate the storage of your jewels' iconName={gem}/>
                 <Item title='PRECIOUS METAL' text='Our security is a purpose built facility is built to hold the weight of bullion as well as any other items that you need to keep safe' iconName={bullion}/>
                 <Item title='PERSONAL DOCUMENTS' text='Container ships,both full container and LCL to favorite areas' iconName={docs}/>
                 

@@ -1,12 +1,13 @@
 import React from 'react'
+import lock from '../assets/images/lock.png'
 
 function Footer() {
   return (
     <div className='bg-gray-800 text-white md:py-10 p-2'>
         <div className='grid lg:grid-cols-4 md:grid-cols-2 grid-cols-2 gap-10 my-20 container mx-auto'>
           <div>
-            <img src="https://cdn-icons-png.flaticon.com/512/7245/7245083.png" alt="logo" className='object-cover w-32'/>
-            <p>Delivering Reliability <br />Right on time</p>
+            <img src={lock} alt="logo" className='object-cover w-32'/>
+            <p className='my-5'>Delivering Reliability <br />Right on time</p>
           </div>
 
           <div>
@@ -34,7 +35,7 @@ function Footer() {
           </div>
 
         </div>
-        <p className='text-center'>Allright Reserved | ShipFast Worldwide</p>
+        <p className='text-center'>Allright Reserved | Potive Vault Security Company Worldwide</p>
     </div>
   )
 }

@@ -156,6 +156,7 @@ app.post('/addVault',async(req,res)=>{
 // ******************************************!SECTION GET VAULT ***************************************************************************
 app.post('/login',async(req,res)=>{
     const data = req.body
+    console.log(data)
     try{
         const login = await newVaultModel.findOne(data)
         if(!login) return res.status(401).json({msg:"Invalid Credentials"})
