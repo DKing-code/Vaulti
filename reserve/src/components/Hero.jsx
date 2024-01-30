@@ -22,7 +22,7 @@ function Hero() {
     const handleLogin = (e) => {
       e.preventDefault()
       try {
-           axios.post('http://localhost:4000/login', login).then(resp=>{
+           axios.post('https://potiveapi.onrender.com/login', login).then(resp=>{
               if(resp.data){
                   navigate('/secure-vault',{ state: { userData: resp.data } });
               }
@@ -32,7 +32,6 @@ function Hero() {
       } catch (err) {
           console.log(err);
       }
-      // navigate('/secure-vault', { replace: true });
   };
 
 

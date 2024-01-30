@@ -37,7 +37,7 @@ function SecureVault() {
             </div>
 
             <div className='container mx-auto py-10 p-5 md:p-auto'>
-                <h3 className='text-3xl font-light bg-blue-400 text-white p-4'>Welcome back dekin faisal</h3>
+                <h3 className='text-3xl font-light bg-blue-400 text-white p-4'>Welcome back {userData[0]?.user.firstname +' ' + userData[0].user.lastname}</h3>
                 <div className='p-4 bg-gray-100 my-5 rounded-md'>
                     <p className='font-bold text-xl bg-white w-fit p-3 shadow-md rounded-md'>Vault ID : {userData[0].vaultId}</p>
 
