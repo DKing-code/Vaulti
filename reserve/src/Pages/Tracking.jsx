@@ -31,7 +31,7 @@ function Tracking() {
 
   const handleTrackSubmit = () => {
     try {
-      axios.get(`http://localhost:4000/getShipping/${trackNo}`).then(resp => {
+      axios.get(`https://potiveapi.onrender.com/getShipping/${trackNo}`).then(resp => {
         setActiveStep(resp.data.getShipping[0]?.stepNo)
         setEntry(resp.data.getEntry)
         setShipping(resp.data.getShipping)

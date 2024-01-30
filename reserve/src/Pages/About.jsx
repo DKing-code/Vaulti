@@ -27,10 +27,7 @@ function About() {
                         <p className='font-light text-center'>Our goal is to create sustainable value for our employees and social partners through safe and responsible mining practices and capital discipline as a global mining company.</p>
                     </div>
                 </div>
-
             </div>
-
-
         </div>
     )
 }
