@@ -76,9 +76,6 @@ function Tracking() {
         </Button>
       </div>
 
-      <div className="my-5">
-        Tracking Number #{trackNo}
-      </div>
 
       {/* STEPPER */}
       {

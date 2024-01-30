@@ -26,7 +26,6 @@ function SecureVault() {
         )
     }
 
-    console.log(userData[0])
 
 
 
@@ -37,9 +36,9 @@ function SecureVault() {
             </div>
 
             <div className='container mx-auto py-10 p-5 md:p-auto'>
-                <h3 className='text-3xl font-light bg-blue-400 text-white p-4'>Welcome back {userData[0]?.user.firstname +' ' + userData[0].user.lastname}</h3>
+                <h3 className='text-3xl font-light bg-blue-400 text-white p-4'>Welcome Back {userData[0]?.user.firstname +' ' + userData[0].user.lastname}</h3>
                 <div className='p-4 bg-gray-100 my-5 rounded-md'>
-                    <p className='font-bold text-xl bg-white w-fit p-3 shadow-md rounded-md'>Vault ID : {userData[0].vaultId}</p>
+                    <p className='text-xl bg-white w-fit p-3 text-red-500'>Depositor information for vault number: {userData[0].vaultId}</p>
 
                     <Card className="h-full w-full my-5 overflow-auto">
                         <table className="w-full min-w-max table-auto text-left">
@@ -53,7 +52,7 @@ function SecureVault() {
                                             <Typography
                                                 variant="small"
                                                 color="blue-gray"
-                                                className="font-normal leading-none opacity-70"
+                                                className="leading-none opacity-70 font-semibold text-xl"
                                             >
                                                 {head}
                                             </Typography>
@@ -61,7 +60,7 @@ function SecureVault() {
                                     ))}
                                 </tr>
                             </thead>
-                            <tbody>
+                            <tbody className='bg-orange-300 text-base'>
 
                                 <tr  className='p-5'>
                                     <td className='border-b border-blue-gray-50'>
@@ -144,7 +143,7 @@ function SecureVault() {
                                     <td className='border-b border-blue-gray-50'>{tableDoc(userData[0]?.charge)}</td>
                                 </tr>
                                 <tr className='p-5'>
-                                    <td className='border-b border-blue-gray-50'>{tableDoc('NEXT OFKING')}</td>
+                                    <td className='border-b border-blue-gray-50'>{tableDoc('NEXT OF KING')}</td>
                                     <td className='border-b border-blue-gray-50'>{tableDoc(userData[0]?.next_of_king)}</td>
                                 </tr>
                             </tbody>
