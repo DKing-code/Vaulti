@@ -31,11 +31,11 @@ function Footer() {
 
             <a href=""><p className='font-light text-xl'>Yogyakarata,</p></a>
             <a href=""><p className='font-light text-xl'>(021) 999 9999</p></a>
-            <a href=""><p className='font-light text-xl'>Ship@gmail.com</p></a>
+            <a href=""><p className='font-light text-xl'>coastal@gmail.com</p></a>
           </div>
 
         </div>
-        <p className='text-center'>Allright Reserved | Potive Vault Security Company Worldwide</p>
+        <p className='text-center'>Allright Reserved | Coastal Security Company Worldwide</p>
     </div>
   )
 }

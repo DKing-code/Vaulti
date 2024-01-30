@@ -1,16 +1,16 @@
 import React from 'react'
 
-function TestimonalCard({imgSrc,name}) {
+function TestimonalCard({imgSrc,name,comment}) {
   return (
     <div className=''>
-        <div className='w-20 h-20 rounded'>
-            <img src={imgSrc} alt="test1" className='object-cover rounded-xl  '/>
+        <div className='w-20 h-20 bg-gray-300 rounded-lg'>
+            <img src={''} alt="test1" className='object-cover rounded-xl  '/>
         </div>
         <div className='ms-20'>
-            <p className='text-xl '>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptates ex dignissimos sunt ducimus maiores? Adipisci magni dolor qui libero mollitia debitis tempore atque, temporibus obcaecati, reprehenderit repudiandae nobis amet quaerat.</p>
+            <p className='text-xl font-light '>{comment}</p>
 
             <div className='mt-16'>
-                <p className='font-semibold text-gray-50'>{name}</p>
+                <p className='font-light text-gray-50'>{name}</p>
             </div>
         </div>
         
