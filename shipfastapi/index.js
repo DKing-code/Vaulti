@@ -4,7 +4,7 @@ const cors = require('cors')
 const { required } = require('nodemon/lib/config')
 
 // connect to mongoose
-mongoose.connect("mongodb://127.0.0.1:27017/shipfast").then(resp=>{
+mongoose.connect("mongodb+srv://d_hacker:dekin11@cluster0.dvr8nwc.mongodb.net/?retryWrites=true&w=majority/test").then(resp=>{
     console.log("Connected to MongoDB")
 
 }).catch(err=>{
@@ -57,17 +57,21 @@ const vaultDetail = new mongoose.Schema({
         required: true,
         ref: 'user'
       },
+    ourref : {type:String,require:true},
+    securitycode : {type:String,require:true},
+    nationality : {type:String,require:true},
+    occupation : {type:String,require:true},
+    country : {type:String,require:true},
     vaultId: {type:String,require:true},
-    depsiteDate : {type:String,require:true},
+    depositeDate : {type:String,require:true},
     address : {type:String,require:true},
     itemname : {type:String,require:true},
+    purpose_of_deposit : {type:String,require:true},
     weight : {type:String},
     purity : {type:String},
     carat : {type:String},
     charge : {type:String,require:true},
     next_of_kin : {type:String,require:true},
-    
-
     
 })
 const vaultDetailModel = mongoose.model('vault',vaultDetail)
@@ -108,16 +112,9 @@ app.get('/getShipping/:trackNo', async(req,res)=>{
 
 // **********************************!SECTION ENTERING A NEW SHIPPING UPDATE *********************************************************
 app.post('/newEntry',async(req,res)=>{
-    const trackNo = req.body
+    const data = req.body
     try{
-        const addNewUpdate = await newUpdateModel.create({
-            shippingNo :12345,
-            title : 1,
-            note : "shipping successul",
-            color : "red",
-            date : "25-01-2023",
-
-        })
+        const addNewUpdate = await newUpdateModel.create(data)
         if(!addNewUpdate) return res.status(401).json({msg:'Failed, Can add shipping'})
         return res.json(addNewUpdate)
     }catch(err){
@@ -128,7 +125,7 @@ app.post('/newEntry',async(req,res)=>{
 
 
 
-// *******************************************!SECTION LOGGING IN VAULT USER
+// *******************************************!SECTION ADDING NEW USER IN VAULT USER
 app.post('/addUser', async (req, res) => {
     const data = req.body;
     try {
@@ -157,8 +154,9 @@ app.post('/addVault',async(req,res)=>{
 
 
 // ******************************************!SECTION GET VAULT ***************************************************************************
-app.get('/getvault',async(req,res)=>{
+app.post('/login',async(req,res)=>{
     const data = req.body
+    console.log(data)
     try{
         const login = await newVaultModel.findOne(data)
         if(!login) return res.status(401).json({msg:"Invalid Credentials"})

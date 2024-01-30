@@ -7,22 +7,13 @@ import {
     DialogBody,
     DialogFooter,
 } from "@material-tailwind/react";
+import axios from 'axios'
 
-function Navbar() {
+function Navbar() { 
     const [open, setOpen] = useState(false);
-    const handleOpen = () => setOpen(!open);
     const [login,setLogin] = useState({})
-    const navigate = useNavigate()
-
-    const handleLogin=()=>{
-        try{
-            
-        }catch(err){
-            console.log(err)
-        }
-        console.log(login)
-        navigate('/secure-vault')
-    }
+    
+    const handleOpen = () => setOpen(true);
 
     return (
         <div className=' sticky top-0 bg-white z-50 '>
@@ -40,17 +31,15 @@ function Navbar() {
 
 
                 <div className='mt-5 md:mt-0 md:block hidden '>
-                    <Link>
+                    {/* <Link>
                         <button className='px-5 py-2 border-blue-600 border-2 rounded font-semibold text-blue-600 hover:bg-blue-50' onClick={handleOpen}>LOGIN</button>
-                    </Link>
+                    </Link> */}
                 </div>
-
-
             </div>
 
-            <Dialog open={open} handler={handleOpen} size='xs'>
+            {/* <Dialog open={open} size='xs'>
                 <DialogBody>
-                    <form class="max-w-screen-lg mt-8 mb-2 " onSubmit={handleLogin}>
+                    <form class="max-w-screen-lg mt-8 mb-2 " onSubmit={()=>handleLogin}>
                         <p className='text-center text-xl px-10'>LOGIN TO VERIFY YOUR VAULTS STORAGE WITH US</p>
                         <div class="flex flex-col gap-6 mb-1 mt-5">
                             <h6
@@ -81,13 +70,13 @@ function Navbar() {
                         <button
                             class="mt-6 block w-full select-none rounded-lg bg-gray-900 py-3 px-6 text-center align-middle font-sans text-xs font-bold uppercase text-white shadow-md shadow-gray-900/10 transition-all hover:shadow-lg hover:shadow-gray-900/20 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
                             type="submit">
-                            sign up
+                            LOG IN
                         </button>
                       
                     </form>
                 </DialogBody>
 
-            </Dialog>
+            </Dialog> */}
 
         </div>
     )

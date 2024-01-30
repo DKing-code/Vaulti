@@ -1,9 +1,15 @@
-import React from 'react'
+import React, { useState } from 'react'
 import vault from '../assets/images/vault.jpeg'
 import { Card, Typography } from "@material-tailwind/react";
+import { useLocation } from 'react-router-dom';
+
+
 
 function SecureVault() {
-    let date = new Date()
+    const location = useLocation();
+    const userData = location.state && location.state.userData;
+
+
     const TABLE_HEAD = ["Name", "Value"];
 
     const tableDoc = (value) => {
@@ -19,6 +25,11 @@ function SecureVault() {
             </td>
         )
     }
+
+    console.log(userData[0])
+
+
+
     return (
         <div>
             <div className='h-[350px] bg-gray-400'>
@@ -28,7 +39,7 @@ function SecureVault() {
             <div className='container mx-auto py-10 p-5 md:p-auto'>
                 <h3 className='text-3xl font-light bg-blue-400 text-white p-4'>Welcome back dekin faisal</h3>
                 <div className='p-4 bg-gray-100 my-5 rounded-md'>
-                    <p className='font-bold text-xl bg-white w-fit p-3 shadow-md rounded-md'>Vault ID : 23588965</p>
+                    <p className='font-bold text-xl bg-white w-fit p-3 shadow-md rounded-md'>Vault ID : {userData[0].vaultId}</p>
 
                     <Card className="h-full w-full my-5 overflow-auto">
                         <table className="w-full min-w-max table-auto text-left">
@@ -52,89 +63,89 @@ function SecureVault() {
                             </thead>
                             <tbody>
 
-                                <tr key={name} className='p-5'>
+                                <tr  className='p-5'>
                                     <td className='border-b border-blue-gray-50'>
                                         {tableDoc('OUR REF')}
                                     </td>
-                                    <td className='border-b border-blue-gray-50'>{tableDoc('faisal')}</td>
+                                    <td className='border-b border-blue-gray-50'>{tableDoc(userData[0]?.ourref)}</td>
                                     
                                 </tr>
-                                <tr key={name} className='p-5'>
+                                <tr className='p-5'>
                                     <td className='border-b border-blue-gray-50'>{tableDoc('SECURITY CODE')}</td>
-                                    <td className='border-b border-blue-gray-50'>{tableDoc('faisal')}</td>
+                                    <td className='border-b border-blue-gray-50'>{tableDoc(userData[0]?.securitycode)}</td>
                                     
                                     
                                 </tr>
                                 <tr  className='p-5'>
                                     <td className='border-b border-blue-gray-50'>{tableDoc('FULL NAME')}</td>
-                                    <td className='border-b border-blue-gray-50'>{tableDoc('faisal')}</td>
+                                    <td className='border-b border-blue-gray-50'>{tableDoc(userData[0]?.user.firstname +' ' + userData[0].user.lastname )}</td>
                                 </tr>
                                 <tr className='p-5'>
-                                    <td>{tableDoc('DATE OF BIRTH')}</td>
-                                    <td>{tableDoc('faisal')}</td>
+                                    <td className='border-b border-blue-gray-50'>{tableDoc('DATE OF BIRTH')}</td>
+                                    <td className='border-b border-blue-gray-50'>{tableDoc(userData[0]?.user.dob)}</td>
 
                                 </tr>
                                 <tr className='p-5'>
                                     <td className='border-b border-blue-gray-50'>{tableDoc('COUNTRY')}</td>
-                                    <td className='border-b border-blue-gray-50'>{tableDoc('faisal')}</td>
+                                    <td className='border-b border-blue-gray-50'>{tableDoc(userData[0]?.country)}</td>
                                     
                                     
                                 </tr>
                                 <tr key={name} className='p-5'>
                                     <td className='border-b border-blue-gray-50'>{tableDoc('NATIONALITY')}</td>
-                                    <td className='border-b border-blue-gray-50'>{tableDoc('faisal')}</td>
+                                    <td className='border-b border-blue-gray-50'>{tableDoc(userData[0]?.nationality)}</td>
                                     
                                     
                                 </tr>
                                 <tr className='p-5'>
                                     <td className='border-b border-blue-gray-50'>{tableDoc('SEX')}</td>
-                                    <td className='border-b border-blue-gray-50'>{tableDoc('faisal')}</td>
+                                    <td className='border-b border-blue-gray-50'>{tableDoc(userData[0]?.user.sex)}</td>
                                     
                                     
                                 </tr>
                                 <tr className='p-5'>
                                     <td className='border-b border-blue-gray-50'>{tableDoc('OCCUPATION')}</td>
-                                    <td className='border-b border-blue-gray-50'>{tableDoc('faisal')}</td>
+                                    <td className='border-b border-blue-gray-50'>{tableDoc(userData[0]?.occupation)}</td>
                                     
                                     
                                 </tr>
                                 <tr className='p-5'>
                                     <td className='border-b border-blue-gray-50'>{tableDoc('DEPOSIT DATE')}</td>
-                                    <td className='border-b border-blue-gray-50'>{tableDoc('faisal')}</td>
+                                    <td className='border-b border-blue-gray-50'>{tableDoc(userData[0]?.date)}</td>
                                     
                                     
                                 </tr>
                                 <tr className='p-5'>
                                     <td className='border-b border-blue-gray-50'>{tableDoc('PURPOSE OF DEPOSIT')}</td>
-                                    <td className='border-b border-blue-gray-50'> {tableDoc('faisal')}</td>
+                                    <td className='border-b border-blue-gray-50'>{tableDoc(userData[0]?.purpose_of_deposit)}</td>
                                 </tr>
                                 <tr className='p-5'>
                                     <td className='border-b border-blue-gray-50'>{tableDoc('ADDRESS')}</td>
-                                    <td className='border-b border-blue-gray-50'>{tableDoc('faisal')}</td> 
+                                    <td className='border-b border-blue-gray-50'>{tableDoc(userData[0]?.address)}</td> 
                                 </tr>
                                 <tr className='p-5'>
                                     <td className='border-b border-blue-gray-50'>{tableDoc('ITEM NAME')}</td>
-                                    <td className='border-b border-blue-gray-50'>{tableDoc('faisal')}</td>
+                                    <td className='border-b border-blue-gray-50'>{tableDoc(userData[0]?.itemname)}</td>
                                 </tr>
                                 <tr className='p-5'>
                                     <td className='border-b border-blue-gray-50'>{tableDoc('WEIGHT')}</td>
-                                    <td className='border-b border-blue-gray-50'> {tableDoc('faisal')}</td>
+                                    <td className='border-b border-blue-gray-50'>{tableDoc(userData[0]?.weight)}</td>
                                 </tr>
                                 <tr className='p-5'>
                                     <td className='border-b border-blue-gray-50'>{tableDoc('PURITY')}</td>
-                                    <td className='border-b border-blue-gray-50'>{tableDoc('faisal')}</td>
+                                    <td className='border-b border-blue-gray-50'>{tableDoc(userData[0]?.purity)}</td>
                                 </tr>
                                 <tr className='p-5'>
                                     <td className='border-b border-blue-gray-50'>{tableDoc('KARAT / CARAT ')}</td>
-                                    <td className='border-b border-blue-gray-50'>{tableDoc('faisal')}</td>
+                                    <td className='border-b border-blue-gray-50'>{tableDoc(userData[0]?.carat)}</td>
                                 </tr>
                                 <tr className='p-5'>
                                     <td className='border-b border-blue-gray-50'>{tableDoc('DEMURAGE CHARGE ')}</td>
-                                    <td className='border-b border-blue-gray-50'>{tableDoc('faisal')}</td>
+                                    <td className='border-b border-blue-gray-50'>{tableDoc(userData[0]?.charge)}</td>
                                 </tr>
                                 <tr className='p-5'>
                                     <td className='border-b border-blue-gray-50'>{tableDoc('NEXT OFKING')}</td>
-                                    <td className='border-b border-blue-gray-50'>{tableDoc('faisal')}</td>
+                                    <td className='border-b border-blue-gray-50'>{tableDoc(userData[0]?.next_of_king)}</td>
                                 </tr>
                             </tbody>
                         </table>
