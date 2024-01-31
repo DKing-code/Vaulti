@@ -105,8 +105,10 @@ function SecureVault() {
                                 <tr className='p-5'>
                                     <td className='border-b border-e-2 border-blue-gray-50'>{tableDoc('OCCUPATION')}</td>
                                     <td className='border-b border-blue-gray-50'>{tableDoc(userData[0]?.occupation)}</td>
-                                    
-                                    
+                                </tr>
+                                <tr className='p-5'>
+                                    <td className='border-b border-e-2 border-blue-gray-50'>{tableDoc('CONTACT')}</td>
+                                    <td className='border-b border-blue-gray-50'>{tableDoc(userData[0]?.contact)}</td>
                                 </tr>
                                 <tr className='p-5'>
                                     <td className='border-b border-e-2 border-blue-gray-50'>{tableDoc('DEPOSIT DATE')}</td>
