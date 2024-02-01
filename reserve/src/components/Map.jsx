@@ -5,14 +5,15 @@ function Map() {
     return (
         <div className='py-10'>
 
-        <MapContainer center={[51.505, -0.09]} zoom={17} scrollWheelZoom={false} className='h-[800px] w-[100%]'>
+        <MapContainer center={[51.700339823681965, 5.273124809237124]} zoom={13} scrollWheelZoom={false} className='h-[800px] w-[100%]'>
             <TileLayer
                 attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
                 url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
             />
-            <Marker position={[51.505, -0.09]}>
+            {/* 51.700339823681965, 5.273124809237124 */}
+            <Marker position={[ 51.700, 5.273]}>
                 <Popup>
-                    A pretty CSS3 popup. <br /> Easily customizable.
+                    Coastal Vault Security
                 </Popup>
             </Marker>
         </MapContainer>
