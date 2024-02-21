@@ -18,10 +18,13 @@ const newShippingSchema = new mongoose.Schema({
     receiverName : {type:String, require:true},
     receiverAddress : {type:String, require:true},
     receiverPhone : {type:String, require:true},
+    receiverCountry : {type:String, require:true},
     senderName : {type:String, require:true},
     senderAddress : {type:String, require:true},
-    senderPhone : {type:String, require:true}
-})
+    senderPhone : {type:String, require:true},
+    senderCountry : {type:String, require:true},
+    itemName : {type:String, require:true}
+  })
 // creating model for the newSHipping
 const newShippingModel = mongoose.model('newshipping',newShippingSchema)
 
