@@ -31,7 +31,7 @@ function Footer() {
 
             <a href=""><p className='font-light text-xl'>Yogyakarata,</p></a>
             <a href=""><p className='font-light text-xl'>(021) 999 9999</p></a>
-            <a href=""><p className='font-light text-xl'>coastal@gmail.com</p></a>
+            <a href=""><p className='font-light text-xl'>support@coastalvault.com</p></a>
           </div>
 
         </div>
