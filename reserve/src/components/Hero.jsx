@@ -10,6 +10,7 @@ import {
   import safedepo from '../assets/images/safeDepo.png'
   import { Link,useNavigate } from 'react-router-dom'
 import axios from 'axios';
+import { BASE_URL } from '../apiUrl';
 
 function Hero() {
     const [open, setOpen] = useState(false);
@@ -24,7 +25,7 @@ function Hero() {
       setLoading(true)
       e.preventDefault()
       try {
-           axios.post('https://potiveapi.onrender.com/login', login).then(resp=>{
+           axios.post(`${BASE_URL}/login`, login).then(resp=>{
               if(resp.data){
                   setLoading(false)
                   navigate('/secure-vault',{ state: { userData: resp.data } });

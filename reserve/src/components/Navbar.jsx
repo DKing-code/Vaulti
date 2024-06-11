@@ -28,6 +28,7 @@ function Navbar() {
                     <Link to='/tracking'>Tracking</Link>
                     <Link to="#service">Service</Link>
                     <Link to="/about">About</Link>
+                    <Link to="/contact">Contact Us</Link>
                 </div>
 
 

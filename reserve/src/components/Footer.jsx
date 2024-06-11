@@ -21,7 +21,7 @@ function Footer() {
           <div>
             <h2 className='md:mb-10 mb-5 font-semibold md:text-2xl text-xl'>Support</h2>
 
-            <a href=""><p className='font-light text-xl'>Contct Us</p></a>
+            <a href="/contact"><p className='font-light text-xl'>Contct Us</p></a>
             <a href=""><p className='font-light text-xl'>Terms of Service</p></a>
             <a href=""><p className='font-light text-xl'>Privacy Policy</p></a>
           </div>
@@ -30,12 +30,12 @@ function Footer() {
             <h2 className='md:mb-10 mb-5 font-bold md:text-2xl text-xl'>Contact</h2>
 
             <a href=""><p className='font-light text-xl'>Yogyakarata,</p></a>
-            <a href=""><p className='font-light text-xl'>(021) 999 9999</p></a>
-            <a href=""><p className='font-light text-xl'>coastal@gmail.com</p></a>
+            <a href=""><p className='font-light text-xl'>+3197005034563</p></a>
+            <a href=""><p className='font-light text-xl'>Info@coastalvault.com </p></a>
           </div>
 
         </div>
-        <p className='text-center'>Allright Reserved | Coastal Security Company Worldwide</p>
+        <p className='text-center'>Allright Reserved | Coastal Vault Security Company Worldwide</p>
     </div>
   )
 }

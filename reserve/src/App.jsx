@@ -8,6 +8,7 @@ import {
 } from "@heroicons/react/24/solid"
 import About from './Pages/About'
 import SecureVault from './Pages/SecureVault'
+import ContactUs from './Pages/Contact'
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
         <Route path='/tracking' element={<Tracking/>} />
         <Route path='/secure-vault' element={<SecureVault/>} />
         <Route path='/about' element={<About/>} />
+        <Route path='/contact' element={<ContactUs/>} />
       </Routes>
     </Router>
   )
