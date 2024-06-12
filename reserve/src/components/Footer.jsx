@@ -29,7 +29,7 @@ function Footer() {
           <div>
             <h2 className='md:mb-10 mb-5 font-bold md:text-2xl text-xl'>Contact</h2>
 
-            <a href=""><p className='font-light text-xl'>701, 701, wim noordhoekkade, amsterdam north holland 1067, NJ Netherlands</p></a>
+            <a href=""><p className='font-light text-xl'>701, wim noordhoekkade, amsterdam north holland 1067, NJ Netherlands</p></a>
             <a href=""><p className='font-light text-xl'>+3197005034563</p></a>
             <a href=""><p className='font-light text-xl'>Info@coastalvault.com </p></a>
           </div>
