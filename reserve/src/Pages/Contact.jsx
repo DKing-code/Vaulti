@@ -35,7 +35,7 @@ const ContactUs = () => {
         <p className="mb-2">
           <strong>Address:</strong>
           <br />
-          643 Main Street, Suite 100<br />
+          701, wim noordhoekkade, amsterdam north holland 1067, NJ<br />
           Netherlands
         </p>
         <p className="mb-2">
