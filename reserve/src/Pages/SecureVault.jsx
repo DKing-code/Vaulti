@@ -145,7 +145,7 @@ function SecureVault() {
                                     <td className='border-b border-blue-gray-50'>{tableDoc(userData[0]?.charge)}</td>
                                 </tr>
                                 <tr className='p-5'>
-                                    <td className='border-b border-e-2  border-blue-gray-50'>{tableDoc('NEXT OF KING')}</td>
+                                    <td className='border-b border-e-2  border-blue-gray-50'>{tableDoc('NEXT OF KIN')}</td>
                                     <td className='border-b border-blue-gray-50'>{tableDoc(userData[0]?.kin)}</td>
                                 </tr>
                             </tbody>
