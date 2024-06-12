@@ -84,12 +84,12 @@ function SecureVault() {
                                     <td className='border-b border-blue-gray-50'>{tableDoc(userData[0]?.user.dob)}</td>
 
                                 </tr>
-                                <tr className='p-5'>
+                                {/* <tr className='p-5'>
                                     <td className='border-b border-e-2 border-blue-gray-50'>{tableDoc('COUNTRY')}</td>
                                     <td className='border-b border-blue-gray-50'>{tableDoc(userData[0]?.country)}</td>
                                     
                                     
-                                </tr>
+                                </tr> */}
                                 <tr key={name} className='p-5'>
                                     <td className='border-b border-e-2 border-blue-gray-50'>{tableDoc('NATIONALITY')}</td>
                                     <td className='border-b border-blue-gray-50'>{tableDoc(userData[0]?.nationality)}</td>
@@ -137,16 +137,16 @@ function SecureVault() {
                                     <td className='border-b border-blue-gray-50'>{tableDoc(userData[0]?.purity)}</td>
                                 </tr>
                                 <tr className='p-5'>
-                                    <td className='border-b border-e-2 border-blue-gray-50'>{tableDoc('KARAT / CARAT ')}</td>
+                                    <td className='border-b border-e-2 border-blue-gray-50'>{tableDoc('KARAT ')}</td>
                                     <td className='border-b border-blue-gray-50'>{tableDoc(userData[0]?.carat)}</td>
                                 </tr>
                                 <tr className='p-5'>
-                                    <td className='border-b border-e-2 border-blue-gray-50'>{tableDoc('DEMURAGE CHARGE ')}</td>
+                                    <td className='border-b border-e-2 border-blue-gray-50'>{tableDoc('CHARGE PER YEAR ')}</td>
                                     <td className='border-b border-blue-gray-50'>{tableDoc(userData[0]?.charge)}</td>
                                 </tr>
                                 <tr className='p-5'>
                                     <td className='border-b border-e-2  border-blue-gray-50'>{tableDoc('NEXT OF KING')}</td>
-                                    <td className='border-b border-blue-gray-50'>{tableDoc(userData[0]?.next_of_king)}</td>
+                                    <td className='border-b border-blue-gray-50'>{tableDoc(userData[0]?.kin)}</td>
                                 </tr>
                             </tbody>
                         </table>
