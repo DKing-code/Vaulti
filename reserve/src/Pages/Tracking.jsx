@@ -57,8 +57,8 @@ function Tracking() {
           type="text"
           label="Enter Tracking Number"
           value={trackNo}
-          maxLength={6}
-          minLength={6}
+          maxLength={10}
+          minLength={10}
           onChange={onChange}
           className="pr-20 uppercase"
           containerProps={{
