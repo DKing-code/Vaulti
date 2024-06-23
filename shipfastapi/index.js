@@ -35,7 +35,7 @@ const newUpdate = new mongoose.Schema({
     note : {type:String, require:true},
     color : {type:String, require:true},
     date : {type:String, require:true},
-})
+},{timestamps:true})
 // creating model for the newSHipping
 const newUpdateModel = mongoose.model('newUpdate',newUpdate)
 

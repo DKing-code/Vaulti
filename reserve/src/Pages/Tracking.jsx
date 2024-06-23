@@ -50,7 +50,7 @@ function Tracking() {
   return (
     <div className="container md:mx-auto p-4">
       <div className="text-center p-5 bg-blue-400 text-white mb-5">
-        <p className="text-xl">Parcel Tracking</p>
+        <p className="text-xl">Track Item</p>
       </div>
       <div className="relative flex md:mx-auto w-full max-w-[24rem] my-5" size="lg">
         <Input
@@ -75,6 +75,47 @@ function Tracking() {
           Track
         </Button>
       </div>
+
+      {
+        shipping.length >= 1 &&
+        <div className="items-start grid md:grid-cols-3 gap-2">
+
+          <div className="relative border border-blue-gray-50 bg-white mb-5 shadow-blue-gray-900/5 flex-1">
+            <div className=" p-2 bg-blue-800 text-white">
+              <p className="text-lg">Senders Address</p>
+            </div>
+
+            <div className="p-2">
+              <p className="text-xs md:text-base capitalize text-gray-600 font-light">Name : {shipping[0]?.senderName}</p>
+              <p className="text-xs md:text-base capitalize text-gray-600 font-light">Address :{shipping[0]?.senderAddress}</p>
+              <p className="text-xs md:text-base capitalize text-gray-600 font-light">Phone : {shipping[0]?.senderPhone}</p>
+            </div>
+          </div>
+
+          <div className="relative border border-blue-gray-50 bg-white mb-5 shadow-blue-gray-900/5 flex-1">
+            <div className=" p-2 bg-blue-800 text-white">
+              <p className="text-lg">Receiver Address</p>
+            </div>
+
+            <div className="p-2">
+              <p className="text-xs md:text-base capitalize text-gray-600 font-light">Name : {shipping[0]?.receiverName}</p>
+              <p className="text-xs md:text-base capitalize text-gray-600 font-light">Address :{shipping[0]?.receiverAddress}</p>
+              <p className="text-xs md:text-base capitalize text-gray-600 font-light">Phone : {shipping[0]?.receiverPhone}</p>
+            </div>
+          </div>
+
+          <div className="relative border border-blue-gray-50 bg-white mb-5 shadow-blue-gray-900/5 flex-1">
+            <div className=" p-2 bg-blue-800 text-white">
+              <p className="text-lg">Item </p>
+            </div>
+
+            <div className="p-2">
+              <p className="text-xs md:text-base capitalize text-gray-600 font-light">Name : {shipping[0]?.itemName}</p>
+            </div>
+          </div>
+
+        </div>
+      }
 
 
       {/* STEPPER */}
@@ -106,6 +147,8 @@ function Tracking() {
           </Stepper>
         </div>
       }
+
+
 
       
 
@@ -140,36 +183,7 @@ function Tracking() {
         }
         {/* end of time line */}
 
-        {
-        shipping.length >= 1 &&
-        <div className="items-start flex">
-
-          <div className="relative border border-blue-gray-50 bg-white mb-5 shadow-blue-gray-900/5 flex-1">
-            <div className=" p-2 bg-blue-800 text-white">
-              <p className="text-lg">Senders Address</p>
-            </div>
-
-            <div className="p-2">
-              <p className="text-xs md:text-md capitalize text-gray-400 font-light">Name : {shipping[0]?.senderName}</p>
-              <p className="text-xs md:text-md capitalize text-gray-400 font-light">Address :{shipping[0]?.senderAddress}</p>
-              <p className="text-xs md:text-md capitalize text-gray-400 font-light">Phone : {shipping[0]?.senderPhone}</p>
-            </div>
-          </div>
-
-          <div className="relative border border-blue-gray-50 bg-white mb-5 shadow-blue-gray-900/5 flex-1">
-            <div className=" p-2 bg-blue-800 text-white">
-              <p className="text-lg">Receiver Address</p>
-            </div>
-
-            <div className="p-2">
-              <p className="text-xs md:text-md capitalize text-gray-400 font-light">Name : {shipping[0]?.receiverName}</p>
-              <p className="text-xs md:text-md capitalize text-gray-400 font-light">Address :{shipping[0]?.receiverAddress}</p>
-              <p className="text-xs md:text-md capitalize text-gray-400 font-light">Phone : {shipping[0]?.receiverPhone}</p>
-            </div>
-          </div>
-
-        </div>
-      }
+       
 
 
 
