@@ -143,7 +143,8 @@ function Tracking() {
         {
         shipping.length >= 1 &&
         <div className="items-start flex">
-          <div className="relative border border-blue-gray-50 bg-white mb-5 shadow-blue-gray-900/5">
+
+          <div className="relative border border-blue-gray-50 bg-white mb-5 shadow-blue-gray-900/5 flex-1">
             <div className=" p-2 bg-blue-800 text-white">
               <p className="text-lg">Senders Address</p>
             </div>
@@ -155,7 +156,7 @@ function Tracking() {
             </div>
           </div>
 
-          <div className="relative border border-blue-gray-50 bg-white mb-5 shadow-blue-gray-900/5">
+          <div className="relative border border-blue-gray-50 bg-white mb-5 shadow-blue-gray-900/5 flex-1">
             <div className=" p-2 bg-blue-800 text-white">
               <p className="text-lg">Receiver Address</p>
             </div>

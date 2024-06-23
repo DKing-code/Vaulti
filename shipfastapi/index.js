@@ -101,7 +101,7 @@ app.post('/newShipping',async(req,res)=>{
 app.get('/getShipping/:trackNo', async(req,res)=>{
     const {trackNo} = req.params
     try{
-        const getEntry = await newUpdateModel.find().where('shippingNo').equals(trackNo).sort({'title':-1})
+        const getEntry = await newUpdateModel.find().where('shippingNo').equals(trackNo).sort({'createdAt':-1})
         const getShipping = await newShippingModel.find().where('shippingNo').equals(trackNo)
 
         if(!getEntry || !getShipping ) {
